@@ -25,13 +25,8 @@ class CompanyViewSet(viewsets.ModelViewSet):
             return Response(emps_serializer.data)
         
         except:
-            return Response('message: company might not exists!!')
+            return Response('message': 'company might not exists!!')
         
-
-    @action(detail=False, methods=['POST'])
-    def createcompany(self, request):
-        print('method allowed')
-        return Response({'message': 'Custom POST action executed successfully.'})
 
     
 class EmployeeViewSet(viewsets.ModelViewSet):
